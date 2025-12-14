@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Web CV | Desarrollador</title>
+
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Iconos (Boxicons) -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="logo">MiPortafolio</div>
+        <ul class="nav-links">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#about">Sobre mí</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Portada) -->
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <span class="greeting">Hola, soy</span>
+            <h1 class="name">Marco Antonio Daza</h1>
+            <h2 class="role">Desarrollador Web Creativo</h2>
+            <p class="description">
+                Transformo ideas en experiencias digitales asombrosas.
+                Aprendiendo y construyendo el futuro de la web paso a paso.
+            </p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
+                <a href="#contact" class="btn btn-outline">Contáctame</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <!-- Placeholder para tu foto -->
+            <div class="img-placeholder">
+                <i class='bx bxs-user'></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sobre Mí -->
+    <section id="about" class="section">
+        <h2 class="section-title">Sobre Mí</h2>
+        <div class="about-container">
+            <div class="about-text">
+                <p>
+                    Soy un apasionado por la tecnología y el diseño. Actualmente estoy construyendo mi camino
+                    como desarrollador web, enfocándome en crear interfaces limpias, modernas y funcionales.
+                    Me encanta aprender nuevas tecnologías y mejorar mis habilidades cada día.
+                </p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="number">1+</span>
+                        <span class="label">Años Aprendiendo</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="number">5+</span>
+                        <span class="label">Proyectos Pequeños</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="skills" class="section alt-bg">
+        <h2 class="section-title">Mis Habilidades</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class='bx bxl-html5 skill-icon html'></i>
+                <h3>HTML5</h3>
+                <p>Estructura semántica y accesible.</p>
+            </div>
+            <div class="skill-card">
+                <i class='bx bxl-css3 skill-icon css'></i>
+                <h3>CSS3</h3>
+                <p>Diseño responsivo, Flexbox y Grid.</p>
+            </div>
+            <div class="skill-card">
+                <i class='bx bxl-javascript skill-icon js'></i>
+                <h3>JavaScript</h3>
+                <p>Interactividad y lógica dinámica.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Tu Nombre. Creado aprendiendo con IA.</p>
+        <div class="socials">
+            <a href="#"><i class='bx bxl-github'></i></a>
+            <a href="#"><i class='bx bxl-linkedin'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
