@@ -157,8 +157,33 @@ img:hover {
     /* Naranja rojizo tipo strings */
 }
 
-/* --- ESTILOS PARA LISTA DE PROYECTOS (SCROLLABLE) --- */
+/* --- LOGO PERSONALIZADO MDev --- */
+.st-logo-custom {
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-family: 'IBM Plex Mono', monospace !important;
+    letter-spacing: -1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
+.logo-icon {
+    color: #4ec9b0 !important;
+    /* Cian técnico */
+    font-size: 24px;
+}
+
+.logo-dot {
+    color: #ce9178 !important;
+    /* Naranja final */
+    font-size: 32px;
+    line-height: 0;
+}
+
+/* --- ESTILOS PARA LISTA DE PROYECTOS (SCROLLABLE) --- */
 .st-portfolio-list-wrap {
     background-color: #252526;
     /* Fondo tarjeta gris oscuro */
@@ -278,4 +303,36 @@ img:hover {
         align-items: flex-start;
         gap: 5px;
     }
+}
+
+/* --- FIX DE ESPACIADO DE TÍTULOS --- */
+.st-section-heading.st-style1 {
+    margin-top: 60px !important;
+    /* Más espacio arriba */
+    margin-bottom: 60px !important;
+    /* Más espacio abajo */
+    padding-top: 20px !important;
+}
+
+.st-section-heading-title {
+    margin-bottom: 15px !important;
+    position: relative;
+    top: 0 !important;
+}
+
+/* Ajuste del título "fantasma" de fondo para que no se monte sobre el texto real */
+.st-section-heading.st-style1 .st-section-heading-subtitle {
+    position: relative !important;
+    /* Dejar de ser absoluto para ocupar su espacio */
+    opacity: 0.1 !important;
+    /* Muy sutil */
+    font-size: 4rem !important;
+    /* Un poco más pequeño */
+    margin-bottom: -40px !important;
+    /* Superponer ligeramente pero con control */
+    top: -10px !important;
+    left: 0 !important;
+    transform: none !important;
+    text-align: center;
+    display: block;
 }
