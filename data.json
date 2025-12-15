@@ -1,0 +1,218 @@
+{
+    "hero": {
+        "greeting": "Hola, soy",
+        "title": "Marco A.<br>Daza",
+        "subtitle": "WebMaster & Experto WordPress"
+    },
+    "about": {
+        "title": "Ingeniero de Sistemas & WebMaster",
+        "subtitle": "Especialista en Alto Rendimiento Web",
+        "text": "Soy Desarrollador de WordPress experto en la creación de temas y plugins personalizados, con un fuerte enfoque en la <strong>optimización de rendimiento (WPO)</strong> y la seguridad web.<br><br>Combino mi experiencia en desarrollo (PHP, HTML, CSS, JS) con sólidos conocimientos en administración de servidores e infraestructura (DevOps, IBM Tivoli, Linux), lo que me permite gestionar proyectos complejos garantizando excelencia técnica y entregas puntuales.",
+        "phone": "+34 678 14 69 56",
+        "email": "Snake33madb@gmail.com",
+        "location": "Pontevedra, Galicia",
+        "freelance": "Disponible"
+    },
+    "social": [
+        {
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/in/marco-antonio-daza-bautista-81bb50b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            "icon": "fab fa-linkedin"
+        },
+        {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/marco.a.bautista.16?locale=es_ES",
+            "icon": "fab fa-facebook"
+        },
+        {
+            "name": "WhatsApp",
+            "url": "https://wa.me/678146956?text=Hola,%20hablamos%20de%20tu%20proyecto?%20",
+            "icon": "fab fa-whatsapp"
+        },
+        {
+            "name": "Email",
+            "url": "mailto:Snake33madb@gmail.com",
+            "icon": "fas fa-envelope"
+        },
+        {
+            "name": "GitHub",
+            "url": "https://github.com/snake33madb2017",
+            "icon": "fab fa-github"
+        }
+    ],
+    "services": [
+        {
+            "icon": "fab fa-wordpress-simple",
+            "title": "WordPress Avanzado",
+            "text": "Desarrollo de temas y plugins a medida. Dominio de Elementor Pro, Divi y WPBakery. Integraciones complejas y tiendas online (WooCommerce/Prestashop)."
+        },
+        {
+            "icon": "fas fa-server",
+            "title": "WebMaster & DevOps",
+            "text": "Administración de servidores (CPanel, WHM), gestión de dominios y seguridad. Optimización WPO para cargas rápidas y auditorías técnicas."
+        },
+        {
+            "icon": "fas fa-code",
+            "title": "Desarrollo a Medida",
+            "text": "Programación en PHP, HTML5, CSS3 y JavaScript. Conexión con bases de datos MySQL y desarrollo de portales web escalables (Strapi/Headless)."
+        }
+    ],
+    "skills": [
+        {
+            "title": "WordPress & CMS (Elementor/Divi/Strapi)",
+            "percent": 95
+        },
+        {
+            "title": "PHP / MySQL / Backend Security",
+            "percent": 90
+        },
+        {
+            "title": "Frontend (HTML/CSS/JS/Responsive)",
+            "percent": 85
+        },
+        {
+            "title": "Sistemas & DevOps (Linux/CPanel)",
+            "percent": 80
+        }
+    ],
+    "experience": [
+        {
+            "title": "Desarrollador Web y maqueteador",
+            "duration": "2025 - Presente",
+            "company": "Origami soluciones digitales",
+            "text": "Desarrollo web y maquetado de sitios web para los clientes de la compañia."
+        },
+        {
+            "title": "Desarrollador Web Freelance",
+            "duration": "2023 - Presente",
+            "company": "Diseños y Webos",
+            "text": "Implementación de portales web con estándares de accesibilidad (Informe IRA) para el programa Kit Digital."
+        },
+        {
+            "title": "WebMaster",
+            "duration": "2022",
+            "company": "Consorcio Circulemos Digital",
+            "text": "Desarrollo web utilizando Strapi (Headless CMS) para el portal <a href='https://www.ventanillamovilidad.com.co/' target='_blank'>Ventanilla Movilidad</a>."
+        },
+        {
+            "title": "Administrador CMS",
+            "duration": "2019 - 2022",
+            "company": "Procolombia (BRM) & Ministerio de Transporte",
+            "text": "Gestión técnica de portales gubernamentales de alto tráfico (mintransporte.gov.co, procolombia.co). Mantenimiento y desarrollo."
+        },
+        {
+            "title": "WebMaster - DevOps",
+            "duration": "2021",
+            "company": "Sense Digital SAS",
+            "text": "Manejo integral de servidores: Wordpress, Cpanel, WHM y Softacullous."
+        }
+    ],
+    "contact": {
+        "email": "Snake33madb@gmail.com",
+        "phone": "+34 678 14 69 56",
+        "location": "Pontevedra, Galicia, España",
+        "text": "Estoy disponible para nuevos retos profesionales, colaboraciones o consultorías técnicas. Contáctame para ver cómo puedo ayudarte a potenciar tu presencia digital."
+    },
+    "projects": [
+        {
+            "name": "Maremonte Setas",
+            "url": "https://maremontesetas.com/"
+        },
+        {
+            "name": "Marca País Colombia",
+            "url": "https://colombia.co/"
+        },
+        {
+            "name": "Debisual",
+            "url": "https://debisual.com/"
+        },
+        {
+            "name": "Novus Code App",
+            "url": "https://novuscodeapp.com/"
+        },
+        {
+            "name": "El Pasaje del Camino",
+            "url": "https://elpasajedelcamino.es/"
+        },
+        {
+            "name": "A Casa da Lena",
+            "url": "https://acasadalena.es/"
+        },
+        {
+            "name": "ACS Medicina Estética",
+            "url": "https://acsmedicinaestetica.es"
+        },
+        {
+            "name": "Agote Propiedades",
+            "url": "https://agotepropiedades.com"
+        },
+        {
+            "name": "Alta Vibración",
+            "url": "https://altavibracion.es"
+        },
+        {
+            "name": "Anima Mundi",
+            "url": "https://animamundi.site"
+        },
+        {
+            "name": "Rueda Garzón",
+            "url": "https://www.ruedagarzon.com/"
+        },
+        {
+            "name": "Berto Medrano",
+            "url": "https://bertomedrano.com"
+        },
+        {
+            "name": "Eotec",
+            "url": "https://eotec.es"
+        },
+        {
+            "name": "Lo Vi En Foto",
+            "url": "https://lovienfoto.es"
+        },
+        {
+            "name": "Pedro Espinosa",
+            "url": "https://pedroespinosa.es"
+        },
+        {
+            "name": "V3 Odontología",
+            "url": "https://v3odontologia.com"
+        },
+        {
+            "name": "Tris Fotografía Animal",
+            "url": "https://trisfotografiaanimal.es"
+        },
+        {
+            "name": "Belu Rodríguez",
+            "url": "https://belurodriguez.com"
+        },
+        {
+            "name": "Excursiones Riviera Maya",
+            "url": "https://excursionesenlarivieramaya.com"
+        },
+        {
+            "name": "Aventura África",
+            "url": "https://www.aventuraafrica.com"
+        },
+        {
+            "name": "Veintiuno D",
+            "url": "https://veintiunod.com"
+        },
+        {
+            "name": "Bellum Brazilian JiuJitsu",
+            "url": "https://bellumbrazilianjiujitsu.com"
+        },
+        {
+            "name": "Andiamo Group",
+            "url": "https://andiamo-group.com"
+        },
+        {
+            "name": "MinTransporte Gov",
+            "url": "https://mintransporte.gov.co"
+        },
+        {
+            "name": "Nuevo Futuro",
+            "url": "https://nuevofuturo.co/"
+        }
+    ]
+}

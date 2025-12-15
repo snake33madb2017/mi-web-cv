@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CMS | MDev Admin</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="assets/admin/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="assets/admin/dist/css/adminlte.min.css">
+    <!-- CodeMirror (vs-code like editor) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/dracula.min.css">
+
+    <style>
+        /* Custom simple overrides */
+        textarea.json-editor {
+            font-family: 'Consolas', monospace;
+            font-size: 0.9rem;
+            background: #2d2d2d;
+            color: #dcdcaa;
+            height: 250px;
+        }
+
+        .btn-save-sticky {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1050;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="/" target="_blank" class="nav-link text-success"><strong><i
+                                class="fas fa-external-link-alt"></i> Ver Sitio Web</strong></a>
+                </li>
+            </ul>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="/admin" class="brand-link">
+                <span class="brand-text font-weight-light" style="padding-left: 1rem;"><strong>CMS</strong> MDev</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+
+                        <li class="nav-header">CONTENIDO</li>
+
+                        <li class="nav-item">
+                            <a href="#hero" class="nav-link active">
+                                <i class="nav-icon fas fa-home"></i>
+                                <p>Hero & Intro</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link">
+                                <i class="nav-icon fas fa-user"></i>
+                                <p>Sobre Mí</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#contact" class="nav-link">
+                                <i class="nav-icon fas fa-envelope"></i>
+                                <p>Contacto</p>
+                            </a>
+                        </li>
+
+                        <li class="nav-header">LISTAS (AVANZADO)</li>
+
+                        <li class="nav-item">
+                            <a href="#json" class="nav-link">
+                                <i class="nav-icon fas fa-code"></i>
+                                <p>Editor JSON</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0">Panel de Administración</h1>
+                        </div><!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <form action="/admin/save" method="POST">
+                <div class="content">
+                    <div class="container-fluid">
+
+                        <!-- HERO SECTION -->
+                        <div class="card card-primary card-outline" id="hero">
+                            <div class="card-header">
+                                <h5 class="m-0"><i class="fas fa-home mr-1"></i> Sección Hero</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label>Título Principal</label>
+                                    <input type="text" class="form-control" name="hero_title"
+                                        value="<%= data.hero.title %>">
+                                </div>
+                                <div class="form-group">
+                                    <label>Subtítulo</label>
+                                    <input type="text" class="form-control" name="hero_subtitle"
+                                        value="<%= data.hero.subtitle %>">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ABOUT SECTION -->
+                        <div class="card card-primary card-outline" id="about">
+                            <div class="card-header">
+                                <h5 class="m-0"><i class="fas fa-user mr-1"></i> Sobre Mí</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Título Perfil</label>
+                                            <input type="text" class="form-control" name="about_title"
+                                                value="<%= data.about.title %>">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Subtítulo Perfil</label>
+                                            <input type="text" class="form-control" name="about_subtitle"
+                                                value="<%= data.about.subtitle %>">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Texto Descripción (HTML permitido)</label>
+                                    <textarea class="form-control" rows="4"
+                                        name="about_text"><%= data.about.text %></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CONTACT SECTION -->
+                        <div class="card card-primary card-outline" id="contact">
+                            <div class="card-header">
+                                <h5 class="m-0"><i class="fas fa-envelope mr-1"></i> Contacto</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 mb-3">
+                                        <div class="form-group">
+                                            <label>Texto de Contacto</label>
+                                            <textarea class="form-control" rows="3"
+                                                name="contact_text"><%= data.contact.text %></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>Email</label>
+                                            <input type="email" class="form-control" name="contact_email"
+                                                value="<%= data.contact.email %>">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>Teléfono</label>
+                                            <input type="text" class="form-control" name="contact_phone"
+                                                value="<%= data.contact.phone %>">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>Ubicación</label>
+                                            <input type="text" class="form-control" name="contact_location"
+                                                value="<%= data.contact.location %>">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LISTAS CON UI VISUAL (JS-DRIVEN) -->
+
+                        <!-- 1. REDES SOCIALES -->
+
+
+                        <!-- 2. SERVICIOS -->
+
+
+                        <!-- 3. SKILLS -->
+
+
+                        <!-- 4. EXPERIENCIA -->
+
+
+                        <!-- 5. PROYECTOS -->
+
+
+                        <!-- JSON EDITOR SECTION (Fallback & Advanced) -->
+                        <div class="card card-dark collapsed-card" id="json">
+                            <div class="card-header">
+                                <h5 class="m-0"><i class="fas fa-code mr-1"></i> Editor JSON (Avanzado)</h5>
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+                                            class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label>Social JSON</label>
+                                    <textarea class="form-control json-editor" name="social_json"
+                                        id="social_json"><%= JSON.stringify(data.social || [], null, 2) %></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Servicios JSON</label>
+                                    <textarea class="form-control json-editor" name="services_json"
+                                        id="services_json"><%= JSON.stringify(data.services || [], null, 2) %></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Skills JSON</label>
+                                    <textarea class="form-control json-editor" name="skills_json"
+                                        id="skills_json"><%= JSON.stringify(data.skills || [], null, 2) %></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Experiencia JSON</label>
+                                    <textarea class="form-control json-editor" name="experience_json"
+                                        id="experience_json"><%= JSON.stringify(data.experience || [], null, 2) %></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Proyectos JSON</label>
+                                    <textarea class="form-control json-editor" name="projects_json"
+                                        id="projects_json"><%= JSON.stringify(data.projects || [], null, 2) %></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SAVE BUTTON STICKY -->
+                    <button type="submit" class="btn btn-primary btn-save-sticky btn-lg">
+                        <i class="fas fa-save"></i> Guardar Cambios
+                    </button>
+
+                </div><!-- /.container-fluid -->
+        </div>
+        </form>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <!-- To the right -->
+        <div class="float-right d-none d-sm-inline">
+            CMS v1.0
+        </div>
+        <!-- Default to the left -->
+        <strong>Copyright &copy; 2025 Marco Daza.</strong> All rights reserved.
+    </footer>
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- REQUIRED SCRIPTS -->
+
+    <!-- jQuery -->
+    <script src="assets/admin/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="assets/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="assets/admin/dist/js/adminlte.min.js"></script>
+
+    <!-- Dynamic Form Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/javascript/javascript.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log("Sistema Admin Iniciado - Modo Editor JSON Avanzado");
+
+            // Initialize CodeMirror for all json-editor textareas
+            const textareas = document.querySelectorAll('textarea.json-editor');
+            textareas.forEach(textarea => {
+                const editor = CodeMirror.fromTextArea(textarea, {
+                    mode: "application/json",
+                    theme: "dracula",
+                    lineNumbers: true,
+                    matchBrackets: true,
+                    autoCloseBrackets: true,
+                    tabSize: 2
+                });
+
+                // Ensure value is saved back to textarea on change, so form submit works
+                editor.on('change', function (cm) {
+                    textarea.value = cm.getValue();
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
+```

@@ -114,6 +114,38 @@ a:hover,
     color: #ffffff !important;
 }
 
+/* AJUSTES BARRA SOCIAL DESKTOP */
+.st-social-group {
+    background-color: #252526 !important;
+    /* Fondo gris oscuro */
+    border-color: #333 !important;
+    width: auto !important;
+    /* Ajustar al contenido */
+    padding: 15px 25px 15px 30px !important;
+    /* Padding equilibrado + extra izquierda curva */
+    height: auto !important;
+    border-radius: 50px 0 0 50px !important;
+    box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.3);
+    /* Sombra elegante */
+}
+
+/* Botones sociales dentro de la barra */
+.st-social-link .st-social-btn {
+    background-color: #1e1e1e !important;
+    /* Más oscuro que la barra */
+    border-color: #444 !important;
+    width: 45px !important;
+    /* Tamaño fijo uniforme */
+    height: 45px !important;
+}
+
+.st-social-link .st-social-btn:hover {
+    background-color: #3e3e42 !important;
+    border-color: #4ec9b0 !important;
+    transform: scale(1.1);
+    /* Efecto pop */
+}
+
 /* 5. TARJETAS Y BORDES */
 .st-iconbox,
 .st-portfolio-single,
@@ -182,6 +214,62 @@ img:hover {
     font-size: 32px;
     line-height: 0;
 }
+
+/* --- REDES SOCIALES MÓVIL (Clase específica para evitar conflictos) --- */
+.st-social-mobile {
+    display: none;
+    /* Por defecto oculto en desktop */
+}
+
+@media (max-width: 991px) {
+    .st-social-mobile {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        position: static !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin-bottom: 30px !important;
+        border-radius: 0 !important;
+    }
+
+    .st-social-mobile .st-social-link {
+        justify-content: center !important;
+        width: 100% !important;
+        flex-wrap: wrap !important;
+    }
+
+    /* Ajuste de margen para iconos en móvil */
+    /* Ajuste de margen para iconos en móvil */
+    .st-social-mobile .st-social-btn {
+        margin: 0 10px !important;
+        /* Espacio entre iconos */
+        padding: 0 !important;
+        /* Forzar sin padding extra */
+        width: 45px !important;
+        height: 45px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    /* Evitar el efecto de expansión en móvil */
+    .st-social-mobile .st-social-btn:hover,
+    .st-social-mobile .st-social-btn.active {
+        padding-right: 0 !important;
+        width: 45px !important;
+    }
+
+    .st-social-mobile .st-social-btn .st-icon-name {
+        display: none !important;
+        /* Ocultar texto si existe */
+    }
+}
+
+
 
 /* --- ESTILOS PARA LISTA DE PROYECTOS (SCROLLABLE) --- */
 .st-portfolio-list-wrap {
@@ -306,33 +394,103 @@ img:hover {
 }
 
 /* --- FIX DE ESPACIADO DE TÍTULOS --- */
+/* Reducimos margins considerablemente en headings */
 .st-section-heading.st-style1 {
-    margin-top: 60px !important;
-    /* Más espacio arriba */
-    margin-bottom: 60px !important;
-    /* Más espacio abajo */
-    padding-top: 20px !important;
+    margin-top: 30px !important;
+    /* Antes ~60-100 */
+    margin-bottom: 30px !important;
+    /* Antes ~60-100 */
+    padding-top: 10px !important;
 }
 
 .st-section-heading-title {
-    margin-bottom: 15px !important;
+    margin-bottom: 10px !important;
     position: relative;
     top: 0 !important;
 }
 
-/* Ajuste del título "fantasma" de fondo para que no se monte sobre el texto real */
+/* Ajuste del título "fantasma" */
 .st-section-heading.st-style1 .st-section-heading-subtitle {
     position: relative !important;
-    /* Dejar de ser absoluto para ocupar su espacio */
     opacity: 0.1 !important;
-    /* Muy sutil */
-    font-size: 4rem !important;
-    /* Un poco más pequeño */
-    margin-bottom: -40px !important;
-    /* Superponer ligeramente pero con control */
-    top: -10px !important;
+    font-size: 3rem !important;
+    /* Aún más pequeño */
+    margin-bottom: -30px !important;
+    top: -5px !important;
     left: 0 !important;
     transform: none !important;
     text-align: center;
     display: block;
+}
+
+
+/* --- REDUCCIÓN GLOBAL DE ESPACIADOS (SPACERS 60% MENOS) --- */
+
+/* Sobrescribimos las clases de altura para reducir espacios vacíos */
+
+/* Desktop Spacing (min-width: 992px) */
+@media screen and (min-width: 992px) {
+    .st-height-b100 {
+        height: 40px !important;
+    }
+
+    .st-height-b80 {
+        height: 32px !important;
+    }
+
+    .st-height-b75 {
+        height: 30px !important;
+    }
+
+    .st-height-b50 {
+        height: 20px !important;
+    }
+
+    .st-height-b30 {
+        height: 12px !important;
+    }
+
+    .st-height-b25 {
+        height: 10px !important;
+    }
+
+    /* Espacio extra en Hero Section específico */
+    .st-hero-wrap .st-height-b80 {
+        height: 60px !important;
+    }
+
+    /* Un poco más aquí para que no pegue al header */
+}
+
+/* Mobile Spacing (max-width: 991px) */
+@media screen and (max-width: 991px) {
+    .st-height-lg-b80 {
+        height: 32px !important;
+    }
+
+    .st-height-lg-b75 {
+        height: 30px !important;
+    }
+
+    .st-height-lg-b50 {
+        height: 20px !important;
+    }
+
+    .st-height-lg-b30 {
+        height: 12px !important;
+    }
+
+    .st-height-lg-b25 {
+        height: 10px !important;
+    }
+
+    .st-height-lg-b20 {
+        height: 8px !important;
+    }
+}
+
+/* Reducir padding en secciones generales */
+section {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
 }

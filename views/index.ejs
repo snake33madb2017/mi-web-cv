@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <!-- Meta Tags SEO -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Marco Daza Bautista">
+    <meta name="description"
+        content="Desarrollador Web experto en WordPress, optimización de rendimiento (WPO) y seguridad. Consultor TI con experiencia en servidores, PHP y bases de datos. Servicios en Galicia y remoto.">
+    <meta name="keywords"
+        content="Desarrollador WordPress, WebMaster Galicia, Experto Elementor, Seguridad WordPress, Programador PHP, Consultor TI, Pontevedra, Diseño Web">
+
+    <!-- Page Title -->
+    <title>Marco Daza | Experto WordPress & WebMaster</title>
+
+    <!-- Google Fonts: IBM Plex Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon Icon -->
+    <link rel="icon" href="assets/img/favicon.png" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <link rel="stylesheet" href="assets/css/lightgallery.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/custom.css?v=3.6" />
+</head>
+
+<body id="home">
+    <!-- Start Header Section -->
+    <header class="st-site-header st-style1 st-sticky-header">
+        <div class="st-main-header">
+            <div class="container">
+                <div class="st-main-header-in">
+                    <div class="st-main-header-left">
+                        <a class="st-site-branding st-logo-custom" href="/">
+                            <i class="fas fa-code logo-icon"></i> MDev<span class="logo-dot">.</span>
+                        </a>
+                    </div>
+                    <div class="st-main-header-right">
+                        <div class="st-nav">
+                            <ul class="st-nav-list st-onepage-nav">
+                                <li><a href="#home" class="st-smooth-move">Inicio</a></li>
+                                <li><a href="#about" class="st-smooth-move">Perfil</a></li>
+                                <li><a href="#services" class="st-smooth-move">Servicios</a></li>
+                                <li><a href="#resume" class="st-smooth-move">Trayectoria</a></li>
+                                <li><a href="#portfolio" class="st-smooth-move">Proyectos</a></li>
+                                <li><a href="#contact" class="st-smooth-move">Contacto</a></li>
+                            </ul>
+                            <div class="sp-phone">
+                                <svg viewBox="0 0 513.64 513.64">
+                                    <path
+                                        d="M499.66,376.96l-71.68-71.68c-25.6-25.6-69.12-15.359-79.36,17.92c-7.68,23.041-33.28,35.841-56.32,30.72c-51.2-12.8-120.32-79.36-133.12-133.12c-7.68-23.041,7.68-48.641,30.72-56.32c33.28-10.24,43.52-53.76,17.92-79.36l-71.68-71.68c-20.48-17.92-51.2-17.92-69.12,0l-48.64,48.64c-48.64,51.2,5.12,186.88,125.44,307.2c120.32,120.32,256,176.641,307.2,125.44l48.64-48.64C517.581,425.6,517.581,394.88,499.66,376.96z" />
+                                </svg>
+                                <div class="sp-phone-no">
+                                    <%= data.contact.phone %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header Section -->
+
+    <!-- Start Hero Seciton -->
+    <div class="st-height-b80 st-height-lg-b80"></div>
+    <section class="st-hero-wrap st-parallax">
+        <div class="st-hero st-style1 st-ripple-version">
+            <div class="container">
+                <div class="st-hero-text">
+                    <h3>
+                        <%= data.hero.greeting %>
+                    </h3>
+                    <h1><%- data.hero.title %></h1>
+                    <h2>
+                        <%= data.hero.subtitle %>
+                    </h2>
+
+                    <!-- Redes Sociales Móvil -->
+                    <div class="st-social-group st-social-mobile d-lg-none">
+                        <div class="st-social-link">
+                            <% if (data.social) { %>
+                                <% data.social.forEach(function(item) { %>
+                                    <a href="<%= item.url %>" class="st-social-btn" target="_blank">
+                                        <span class="st-social-icon"><i class="<%= item.icon %>"></i></span>
+                                    </a>
+                                    <% }); %>
+                                        <% } %>
+                        </div>
+                    </div>
+
+                    <div class="st-hero-btn">
+                        <a href="#contact" class="st-btn st-style1 st-color1 st-smooth-move">Contactar Ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero Image -->
+        <div class="st-hero-img st-to-right">
+            <img class="wow fadeInRight" src="assets/img/section/marco10.png" alt="Marco Daza">
+            <div class="st-social-group d-none d-lg-block wow fadeInLeft">
+                <div class="st-social-link">
+                    <% if (data.social) { %>
+                        <% data.social.forEach(function(item) { %>
+                            <a href="<%= item.url %>" class="st-social-btn" target="_blank">
+                                <span class="st-social-icon"><i class="<%= item.icon %>"></i></span>
+                            </a>
+                            <% }); %>
+                                <% } %>
+                </div>
+            </div>
+        </div>
+        <div id="particles-js"></div>
+    </section>
+    <!-- End Hero Seciton -->
+
+    <!-- Start About Seciton -->
+    <section id="about" class="st-about-wrap">
+        <div class="st-height-b100 st-height-lg-b80"></div>
+        <div class="container">
+            <div class="st-section-heading st-style1">
+                <h4 class="st-section-heading-title">PERFIL</h4>
+                <h2 class="st-section-heading-subtitle">PERFIL</h2>
+            </div>
+            <div class="st-height-b25 st-height-lg-b25"></div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 wow fadeInLeft">
+                    <div class="st-about-img-wrap">
+                        <div class="st-about-img st-dynamic-bg st-bg" data-src="assets/img/section/marco2.JPEG"></div>
+                    </div>
+                    <div class="st-height-b0 st-height-lg-b30"></div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="st-vertical-middle">
+                        <div class="st-vertical-middle-in">
+                            <div class="st-text-block st-style1">
+                                <h2 class="st-text-block-title">
+                                    <%= data.about.title %>
+                                </h2>
+                                <h4 class="st-text-block-subtitle">
+                                    <%= data.about.subtitle %>
+                                </h4>
+                                <div class="st-text-block-text">
+                                    <p><%- data.about.text %></p>
+                                </div>
+                                <ul class="st-text-block-details st-mp0">
+                                    <li><span>Teléfono</span> : <span>
+                                            <%= data.contact.phone %>
+                                        </span></li>
+                                    <li><span>Email</span> : <span>
+                                            <%= data.contact.email %>
+                                        </span></li>
+                                    <li><span>Ubicación</span> : <span>
+                                            <%= data.contact.location %>
+                                        </span></li>
+                                    <li><span>Freelance</span> : <span>
+                                            <%= data.about.freelance %>
+                                        </span></li>
+                                </ul>
+                                <div class="st-text-block-btn">
+                                    <a href="#contact" class="st-btn st-style1 st-color1">Solicitar Presupuesto</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Start Service Seciton -->
+    <section id="services">
+        <div class="st-height-b100 st-height-lg-b80"></div>
+        <div class="container">
+            <div class="st-section-heading st-style1">
+                <h4 class="st-section-heading-title">LO QUE HAGO</h4>
+                <h2 class="st-section-heading-subtitle">SERVICIOS</h2>
+            </div>
+            <div class="st-height-b25 st-height-lg-b25"></div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <% data.services.forEach(function(service) { %>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="st-iconbox st-style1">
+                            <div class="st-iconbox-icon"><i class="<%= service.icon %>"
+                                    style="font-size: 40px; color: #FFD200;"></i></div>
+                            <h2 class="st-iconbox-title">
+                                <%= service.title %>
+                            </h2>
+                            <div class="st-iconbox-text">
+                                <%= service.text %>
+                            </div>
+                        </div>
+                        <div class="st-height-b30 st-height-lg-b30"></div>
+                    </div>
+                    <% }); %>
+            </div>
+        </div>
+    </section>
+
+    <!-- Start Skill Seciton -->
+    <section class="st-dark-bg">
+        <div class="st-height-b100 st-height-lg-b80"></div>
+        <div class="container">
+            <div class="st-section-heading st-style1">
+                <h4 class="st-section-heading-title">COMPETENCIAS</h4>
+                <h2 class="st-section-heading-subtitle">SKILLS</h2>
+            </div>
+            <div class="st-height-b25 st-height-lg-b25"></div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="st-skill-wrap">
+                        <div class="st-skill-heading">
+                            <h2 class="st-skill-title">Excelencia técnica y estratégica.</h2>
+                            <div class="st-skill-subtitle">
+                                Mi perfil combina la creatividad del desarrollo frontend con la robustez de la
+                                administración de sistemas.
+                                Garantizo webs que no solo se ven bien, sino que funcionan rápido y son seguras.
+                            </div>
+                            <br>
+                            <ul style="color:#a0a0b0; list-style: disc; margin-left: 20px;">
+                                <li>Gestión efectiva de proyectos</li>
+                                <li>Comunicación clara y resolución de problemas</li>
+                                <li>Compromiso con la puntualidad</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="st-height-b0 st-height-lg-b30"></div>
+                    <div class="st-progressbar-wrap">
+                        <% data.skills.forEach(function(skill) { %>
+                            <div class="st-single-progressbar">
+                                <div class="st-progressbar-heading">
+                                    <h3 class="st-progressbar-title">
+                                        <%= skill.title %>
+                                    </h3>
+                                    <div class="st-progressbar-percentage wow fadeInLeft" data-wow-duration="1.5s"
+                                        data-wow-delay="0.5s">
+                                        <%= skill.percent %>%
+                                    </div>
+                                </div>
+                                <div class="st-progressbar" data-progress="<%= skill.percent %>">
+                                    <div class="st-progressbar-in wow fadeInLeft"></div>
+                                </div>
+                            </div>
+                            <div class="st-height-b30 st-height-lg-b20"></div>
+                            <% }); %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Start Resume Seciton -->
+    <section id="resume" class="st-dark-bg">
+        <div class="st-height-b100 st-height-lg-b80"></div>
+        <div class="container">
+            <div class="st-section-heading st-style1">
+                <h4 class="st-section-heading-title">RESUMEN</h4>
+                <h2 class="st-section-heading-subtitle">TRAYECTORIA</h2>
+            </div>
+            <div class="st-height-b25 st-height-lg-b25"></div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <!-- Experiencia -->
+                <div class="col-lg-6">
+                    <div class="st-resume-wrap">
+                        <div class="st-resume-heading">
+                            <img src="assets/img/icon/resume-icon1.png" alt="icon">
+                            <h2 class="st-resume-heading-title">Experiencia Laboral</h2>
+                        </div>
+                        <div class="st-height-b50 st-height-lg-b30"></div>
+
+                        <div class="st-resume-timeline-wrap">
+                            <% data.experience.forEach(function(exp) { %>
+                                <div class="st-resume-timeline">
+                                    <h3 class="st-resume-timeline-title">
+                                        <%= exp.title %>
+                                    </h3>
+                                    <div class="st-resume-timeline-duration">
+                                        <%= exp.duration %>
+                                    </div>
+                                    <h4 class="st-resume-timeline-subtitle">
+                                        <%= exp.company %>
+                                    </h4>
+                                    <div class="st-resume-timeline-text">
+                                        <p><%- exp.text %></p>
+                                    </div>
+                                </div>
+                                <div class="st-height-b50 st-height-lg-b30"></div>
+                                <% }); %>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Educación (Static for now to avoid overcomplication in V1) -->
+                <div class="col-lg-6">
+                    <div class="st-height-b0 st-height-lg-b50"></div>
+                    <div class="st-resume-wrap">
+                        <div class="st-resume-heading">
+                            <img src="assets/img/icon/resume-icon2.png" alt="icon">
+                            <h2 class="st-resume-heading-title">Educación & Formación TI</h2>
+                        </div>
+                        <div class="st-height-b50 st-height-lg-b30"></div>
+
+                        <div class="st-resume-timeline-wrap">
+                            <div class="st-resume-timeline">
+                                <h3 class="st-resume-timeline-title">Ingeniero de Sistemas</h3>
+                                <div class="st-resume-timeline-duration">Graduado</div>
+                                <h4 class="st-resume-timeline-subtitle">Universidad San Martin (Bogotá)</h4>
+                            </div>
+
+                            <div class="st-height-b50 st-height-lg-b30"></div>
+
+                            <div class="st-resume-timeline">
+                                <h3 class="st-resume-timeline-title">Certificaciones IBM & Sistemas</h3>
+                                <div class="st-resume-timeline-duration">2014 - 2015</div>
+                                <h4 class="st-resume-timeline-subtitle">Especialización Técnica</h4>
+                                <div class="st-resume-timeline-text">
+                                    <p>
+                                        • Especialista IBM AIX 6 System Administration.<br>
+                                        • IBM Tivoli Storage Manager (Implementación y Admin).<br>
+                                        • Técnico en mantenimiento de equipos (SENA).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Start Portfolio/Projects Seciton -->
+    <section id="portfolio">
+        <div class="st-height-b100 st-height-lg-b80"></div>
+        <div class="container">
+            <div class="st-section-heading st-style1">
+                <h4 class="st-section-heading-title">PORTFOLIO</h4>
+                <h2 class="st-section-heading-subtitle">PROYECTOS</h2>
+            </div>
+            <div class="st-height-b25 st-height-lg-b25"></div>
+        </div>
+        <div class="container">
+            <div class="st-portfolio-list-wrap">
+                <div class="st-portfolio-header">
+                    <h3>Listado de Proyectos Web</h3>
+                    <p>Historial de implementaciones y desarrollos destacados.</p>
+                </div>
+                <div class="st-portfolio-scroll-container">
+                    <ul class="st-project-list">
+                        <% data.projects.forEach(function(project) { %>
+                            <li>
+                                <span class="project-name">
+                                    <%= project.name %>
+                                </span>
+                                <a href="<%= project.url %>" target="_blank" class="project-link">
+                                    <%= project.url.replace('https://', '' ).replace(/\/$/, '' ) %> <i
+                                            class="fas fa-external-link-alt"></i>
+                                </a>
+                            </li>
+                            <% }); %>
+                    </ul>
+                </div>
+                <div class="st-portfolio-footer">
+                    <small>Scroll para ver más proyectos <i class="fas fa-arrow-down"></i></small>
+                </div>
+            </div>
+        </div>
+        <div class="st-height-b100 st-height-lg-b80"></div>
+    </section>
+
+    <!-- Start Contact Seciton -->
+    <section id="contact" class="st-dark-bg">
+        <div class="st-height-b100 st-height-lg-b80"></div>
+        <div class="container">
+            <div class="st-section-heading st-style1">
+                <h4 class="st-section-heading-title">HABLEMOS</h4>
+                <h2 class="st-section-heading-subtitle">CONTACTO</h2>
+            </div>
+            <div class="st-height-b25 st-height-lg-b25"></div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3 class="st-contact-title">¿Tienes un proyecto en mente?</h3>
+                    <div class="st-contact-text">
+                        <%- data.contact.text %>
+                    </div>
+                    <div class="st-contact-info-wrap">
+                        <div class="st-single-contact-info">
+                            <div class="st-single-contact-info-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="st-single-contact-info-body">
+                                <h4 class="st-single-contact-info-title">Email</h4>
+                                <a href="mailto:<%= data.contact.email %>" class="st-single-contact-info-text">
+                                    <%= data.contact.email %>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="st-single-contact-info">
+                            <div class="st-single-contact-info-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="st-single-contact-info-body">
+                                <h4 class="st-single-contact-info-title">Teléfono</h4>
+                                <span class="st-single-contact-info-text">
+                                    <%= data.contact.phone %>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="st-single-contact-info">
+                            <div class="st-single-contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="st-single-contact-info-body">
+                                <h4 class="st-single-contact-info-title">Ubicación</h4>
+                                <span class="st-single-contact-info-text">
+                                    <%= data.contact.location %>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <!-- Formulario Visual (Requiere backend para funcionar) -->
+                    <!-- Formulario Funcional vía FormSubmit -->
+                    <form class="st-contact-form" action="https://formsubmit.co/snake33madb@gmail.com" method="POST">
+                        <!-- Configuración FormSubmit -->
+                        <input type="hidden" name="_next" value="http://localhost:3000/">
+                        <input type="hidden" name="_subject" value="Nuevo mensaje desde Portfolio MDev">
+                        <input type="hidden" name="_captcha" value="false">
+
+                        <div class="st-form-field">
+                            <input type="text" id="name" name="name" placeholder="Tu Nombre" required>
+                        </div>
+                        <div class="st-form-field">
+                            <input type="email" id="email" name="email" placeholder="Tu Email" required>
+                        </div>
+                        <div class="st-form-field">
+                            <input type="text" id="subject" name="subject" placeholder="Asunto" required>
+                        </div>
+                        <div class="st-form-field">
+                            <textarea id="msg" name="message" placeholder="Mensaje" cols="30" rows="10"
+                                required></textarea>
+                        </div>
+                        <button class="st-btn st-style1 st-color1" type="submit">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="st-height-b100 st-height-lg-b80"></div>
+    </section>
+
+    <!-- Start Footer Seciton -->
+    <footer>
+        <div class="container">
+            <div class="st-copyright-wrap text-center">
+                <div class="st-copyright-text">© 2025 Marco Daza. WebMaster & WordPress Developer.</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/jquery.slick.min.js"></script>
+    <script src="assets/js/lightgallery.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/particles.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
