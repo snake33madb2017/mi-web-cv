@@ -2,12 +2,12 @@
     "hero": {
         "greeting": "Hola, soy",
         "title": "Marco A.<br>Daza",
-        "subtitle": "WebMaster & Experto WordPress"
+        "subtitle": "Desarrollador & Maqueteador Web"
     },
     "about": {
-        "title": "Ingeniero de Sistemas & WebMaster",
-        "subtitle": "Especialista en Alto Rendimiento Web",
-        "text": "Soy Desarrollador de WordPress experto en la creación de temas y plugins personalizados, con un fuerte enfoque en la <strong>optimización de rendimiento (WPO)</strong> y la seguridad web.<br><br>Combino mi experiencia en desarrollo (PHP, HTML, CSS, JS) con sólidos conocimientos en administración de servidores e infraestructura (DevOps, IBM Tivoli, Linux), lo que me permite gestionar proyectos complejos garantizando excelencia técnica y entregas puntuales.",
+        "title": "Desarrollador CMS & Maqueteador Web",
+        "subtitle": "Experto en WordPress, Shopify, Elementor y Divi",
+        "text": "Soy <strong>Desarrollador y Maqueteador Web</strong> especializado en la administración y desarrollo de sitios en diferentes CMS como <strong>WordPress, PrestaShop y Shopify</strong>. Domino a la perfección constructores visuales como <strong>Elementor Pro, Divi y WPBakery</strong> para crear diseños a medida.<br><br>Además, desarrollo <strong>plugins personalizados</strong> con HTML, CSS, JS, Node.js y PHP. Integro estrategias de <strong>SEO y SEM</strong> para asegurar que cada web no solo sea funcional y estética, sino que también posicione y convierta.",
         "phone": "+34 678 14 69 56",
         "email": "Snake33madb@gmail.com",
         "location": "Pontevedra, Galicia",
@@ -42,37 +42,37 @@
     ],
     "services": [
         {
-            "icon": "fab fa-wordpress-simple",
-            "title": "WordPress Avanzado",
-            "text": "Desarrollo de temas y plugins a medida. Dominio de Elementor Pro, Divi y WPBakery. Integraciones complejas y tiendas online (WooCommerce/Prestashop)."
+            "icon": "fab fa-wordpress",
+            "title": "CMS & E-commerce",
+            "text": "Desarrollo y administración en WordPress, PrestaShop y Shopify. Tiendas online robustas y plataformas de contenido gestionables."
         },
         {
-            "icon": "fas fa-server",
-            "title": "WebMaster & DevOps",
-            "text": "Administración de servidores (CPanel, WHM), gestión de dominios y seguridad. Optimización WPO para cargas rápidas y auditorías técnicas."
+            "icon": "fas fa-layer-group",
+            "title": "Maquetación Visual",
+            "text": "Diseño y maquetación avanzada con Elementor Pro, Divi y WPBakery. Transformo cualquier diseño en una web pixel-perfect."
         },
         {
             "icon": "fas fa-code",
-            "title": "Desarrollo a Medida",
-            "text": "Programación en PHP, HTML5, CSS3 y JavaScript. Conexión con bases de datos MySQL y desarrollo de portales web escalables (Strapi/Headless)."
+            "title": "Desarrollo Full Stack",
+            "text": "Programación a medida y plugins propios con HTML, CSS, JS, Node.js y PHP. Soluciones técnicas complejas y optimización WPO."
         }
     ],
     "skills": [
         {
-            "title": "WordPress & CMS (Elementor/Divi/Strapi)",
+            "title": "CMS (WordPress/Shopify/PrestaShop)",
+            "percent": 98
+        },
+        {
+            "title": "Builders (Elementor/Divi/WPBakery)",
             "percent": 95
         },
         {
-            "title": "PHP / MySQL / Backend Security",
+            "title": "Desarrollo (HTML/CSS/JS/PHP/Node)",
             "percent": 90
         },
         {
-            "title": "Frontend (HTML/CSS/JS/Responsive)",
+            "title": "SEO/SEM & WPO",
             "percent": 85
-        },
-        {
-            "title": "Sistemas & DevOps (Linux/CPanel)",
-            "percent": 80
         }
     ],
     "experience": [

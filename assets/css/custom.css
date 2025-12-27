@@ -58,6 +58,7 @@ h1,
 h2,
 h3,
 h4,
+.h4,
 h5,
 h6 {
     color: #e0e0e0 !important;
@@ -384,7 +385,7 @@ img:hover {
 .st-portfolio-footer {
     text-align: center;
     margin-top: 15px;
-    color: #666;
+    color: #aaaaaa;
     font-size: 0.8rem;
     border-top: 1px solid #333333;
     padding-top: 10px;
@@ -499,4 +500,43 @@ img:hover {
 section {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
+}
+
+/* --- ACCESIBILIDAD Y UX --- */
+/* 1. CLASE PARA LECTORES DE PANTALLA (sr-only) */
+.st-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* 2. MEJORA DE CONTRASTE EN PLACEHOLDERS */
+.st-form-field input::placeholder,
+.st-form-field textarea::placeholder {
+    color: #bbbbbb !important;
+    opacity: 1;
+}
+
+.st-form-field input::-webkit-input-placeholder,
+.st-form-field textarea::-webkit-input-placeholder {
+    color: #bbbbbb !important;
+}
+
+.st-form-field input,
+.st-form-field textarea {
+    color: #e0e0e0 !important;
+}
+
+/* FIX ACCESIBILIDAD MENU MOVIL */
+.st-munu-toggle span,
+.st-munu-toggle span:before,
+.st-munu-toggle span:after {
+    background-color: #e0e0e0 !important;
+    /* Alto contraste para icono hamburguesa */
 }

@@ -13,12 +13,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Marco Daza Bautista">
     <meta name="description"
-        content="Desarrollador Web experto en WordPress, optimización de rendimiento (WPO) y seguridad. Consultor TI con experiencia en servidores, PHP y bases de datos. Servicios en Galicia y remoto.">
+        content="Desarrollador Web experto en CMS (WordPress, Shopify, PrestaShop) y maquetación con Elementor, Divi y WPBakery. Desarrollo de plugins y optimización SEO/SEM.">
     <meta name="keywords"
-        content="Desarrollador WordPress, WebMaster Galicia, Experto Elementor, Seguridad WordPress, Programador PHP, Consultor TI, Pontevedra, Diseño Web">
+        content="WordPress, Shopify, PrestaShop, Elementor, Divi, WPBakery, Desarrollador Web, Plugins, Node.js, PHP, HTML, CSS, SEO, SEM, Galicia">
 
     <!-- Título de Página -->
-    <title>Marco Daza | Experto WordPress & WebMaster</title>
+    <title>Marco Daza | Experto en CMS & Maquetación Web</title>
 
     <!-- Google Fonts: IBM Plex Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +28,8 @@
     <!-- Icono Favicon -->
     <link rel="icon" href="assets/img/favicon.png" />
 
-    <!-- Hojas de Estilo -->
+    <!-- Hojas de Estilo Unificadas (Optimización) -->
+    <!--
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/fontawesome.css" />
     <link rel="stylesheet" href="assets/css/slick.css" />
@@ -36,6 +37,44 @@
     <link rel="stylesheet" href="assets/css/animate.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/custom.css?v=3.6" />
+    -->
+    <link rel="stylesheet" href="assets/css/bundle.css?v=1.1" />
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mdev-portfolio.onrender.com/">
+    <meta property="og:title" content="Marco Daza | Experto en CMS & Maquetación Web">
+    <meta property="og:description"
+        content="Desarrollador Web experto en CMS (WordPress, Shopify, PrestaShop) y maquetación con Elementor, Divi y WPBakery. Desarrollo de plugins y optimización SEO/SEM.">
+    <meta property="og:image" content="https://mdev-portfolio.onrender.com/assets/img/section/marco2.jpeg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mdev-portfolio.onrender.com/">
+    <meta property="twitter:title" content="Marco Daza | Experto en CMS & Maquetación Web">
+    <meta property="twitter:description"
+        content="Desarrollador Web experto en CMS (WordPress, Shopify, PrestaShop) y maquetación con Elementor, Divi y WPBakery.">
+    <meta property="twitter:image" content="https://mdev-portfolio.onrender.com/assets/img/section/marco2.jpeg">
+
+    <!-- Datos Estructurados JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Marco Daza | Desarrollador Web",
+      "image": "https://mdev-portfolio.onrender.com/assets/img/section/marco2.jpeg",
+      "url": "https://mdev-portfolio.onrender.com",
+      "telephone": "<%= data.contact.phone %>",
+      "email": "<%= data.contact.email %>",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Galicia",
+        "addressCountry": "ES"
+      },
+      "priceRange": "$$",
+      "description": "Desarrollador Web experto en CMS (WordPress, Shopify, PrestaShop) y maquetadores visuales."
+    }
+    </script>
 </head>
 
 <body id="home">
@@ -95,7 +134,8 @@
                         <div class="st-social-link">
                             <% if (data.social) { %>
                                 <% data.social.forEach(function(item) { %>
-                                    <a href="<%= item.url %>" class="st-social-btn" target="_blank">
+                                    <a href="<%= item.url %>" class="st-social-btn" target="_blank"
+                                        aria-label="Visitar mi perfil en <%= item.name %>">
                                         <span class="st-social-icon"><i class="<%= item.icon %>"></i></span>
                                     </a>
                                     <% }); %>
@@ -111,12 +151,15 @@
         </div>
         <!-- Imagen Hero -->
         <div class="st-hero-img st-to-right">
-            <img class="wow fadeInRight" src="assets/img/section/marco10.png" alt="Marco Daza">
+            <img class="wow fadeInRight"
+                src="assets/img/section/Marco_Antonio_Daza_desarrollador_web_españa_galicia_pontevedra.webp"
+                alt="Marco Daza">
             <div class="st-social-group d-none d-lg-block wow fadeInLeft">
                 <div class="st-social-link">
                     <% if (data.social) { %>
                         <% data.social.forEach(function(item) { %>
-                            <a href="<%= item.url %>" class="st-social-btn" target="_blank">
+                            <a href="<%= item.url %>" class="st-social-btn" target="_blank"
+                                aria-label="Visitar mi perfil en <%= item.name %>">
                                 <span class="st-social-icon"><i class="<%= item.icon %>"></i></span>
                             </a>
                             <% }); %>
@@ -133,8 +176,8 @@
         <div class="st-height-b100 st-height-lg-b80"></div>
         <div class="container">
             <div class="st-section-heading st-style1">
-                <h4 class="st-section-heading-title">PERFIL</h4>
-                <h2 class="st-section-heading-subtitle">PERFIL</h2>
+                <span class="st-section-heading-title h4">PERFIL</span>
+                <h2 class="st-section-heading-subtitle" aria-hidden="true">PERFIL</h2>
             </div>
             <div class="st-height-b25 st-height-lg-b25"></div>
         </div>
@@ -189,8 +232,8 @@
         <div class="st-height-b100 st-height-lg-b80"></div>
         <div class="container">
             <div class="st-section-heading st-style1">
-                <h4 class="st-section-heading-title">LO QUE HAGO</h4>
-                <h2 class="st-section-heading-subtitle">SERVICIOS</h2>
+                <span class="st-section-heading-title h4">LO QUE HAGO</span>
+                <h2 class="st-section-heading-subtitle" aria-hidden="true">SERVICIOS</h2>
             </div>
             <div class="st-height-b25 st-height-lg-b25"></div>
         </div>
@@ -221,8 +264,8 @@
         <div class="st-height-b100 st-height-lg-b80"></div>
         <div class="container">
             <div class="st-section-heading st-style1">
-                <h4 class="st-section-heading-title">COMPETENCIAS</h4>
-                <h2 class="st-section-heading-subtitle">SKILLS</h2>
+                <span class="st-section-heading-title h4">COMPETENCIAS</span>
+                <h2 class="st-section-heading-subtitle" aria-hidden="true">SKILLS</h2>
             </div>
             <div class="st-height-b25 st-height-lg-b25"></div>
         </div>
@@ -279,8 +322,8 @@
         <div class="st-height-b100 st-height-lg-b80"></div>
         <div class="container">
             <div class="st-section-heading st-style1">
-                <h4 class="st-section-heading-title">RESUMEN</h4>
-                <h2 class="st-section-heading-subtitle">TRAYECTORIA</h2>
+                <span class="st-section-heading-title h4">RESUMEN</span>
+                <h2 class="st-section-heading-subtitle" aria-hidden="true">TRAYECTORIA</h2>
             </div>
             <div class="st-height-b25 st-height-lg-b25"></div>
         </div>
@@ -290,7 +333,7 @@
                 <div class="col-lg-6">
                     <div class="st-resume-wrap">
                         <div class="st-resume-heading">
-                            <img src="assets/img/icon/resume-icon1.png" alt="icon">
+                            <img src="assets/img/icon/resume-icon1.png" alt="Icono Experiencia Laboral">
                             <h2 class="st-resume-heading-title">Experiencia Laboral</h2>
                         </div>
                         <div class="st-height-b50 st-height-lg-b30"></div>
@@ -322,7 +365,7 @@
                     <div class="st-height-b0 st-height-lg-b50"></div>
                     <div class="st-resume-wrap">
                         <div class="st-resume-heading">
-                            <img src="assets/img/icon/resume-icon2.png" alt="icon">
+                            <img src="assets/img/icon/resume-icon2.png" alt="Icono Educación">
                             <h2 class="st-resume-heading-title">Educación & Formación TI</h2>
                         </div>
                         <div class="st-height-b50 st-height-lg-b30"></div>
@@ -360,8 +403,8 @@
         <div class="st-height-b100 st-height-lg-b80"></div>
         <div class="container">
             <div class="st-section-heading st-style1">
-                <h4 class="st-section-heading-title">PORTFOLIO</h4>
-                <h2 class="st-section-heading-subtitle">PROYECTOS</h2>
+                <span class="st-section-heading-title h4">PORTFOLIO</span>
+                <h2 class="st-section-heading-subtitle" aria-hidden="true">PROYECTOS</h2>
             </div>
             <div class="st-height-b25 st-height-lg-b25"></div>
         </div>
@@ -399,8 +442,8 @@
         <div class="st-height-b100 st-height-lg-b80"></div>
         <div class="container">
             <div class="st-section-heading st-style1">
-                <h4 class="st-section-heading-title">HABLEMOS</h4>
-                <h2 class="st-section-heading-subtitle">CONTACTO</h2>
+                <span class="st-section-heading-title h4">HABLEMOS</span>
+                <h2 class="st-section-heading-subtitle" aria-hidden="true">CONTACTO</h2>
             </div>
             <div class="st-height-b25 st-height-lg-b25"></div>
         </div>
@@ -446,20 +489,26 @@
                     <!-- Formulario Funcional vía FormSubmit -->
                     <form class="st-contact-form" action="https://formsubmit.co/snake33madb@gmail.com" method="POST">
                         <!-- Configuración FormSubmit -->
-                        <input type="hidden" name="_next" value="http://localhost:3000/">
+                        <input type="hidden" name="_next" value="https://mdev-portfolio.onrender.com/">
                         <input type="hidden" name="_subject" value="Nuevo mensaje desde Portfolio MDev">
                         <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="text" name="_honey" style="display:none">
 
                         <div class="st-form-field">
+                            <label for="name" class="st-sr-only">Nombre Completo</label>
                             <input type="text" id="name" name="name" placeholder="Tu Nombre" required>
                         </div>
                         <div class="st-form-field">
+                            <label for="email" class="st-sr-only">Correo Electrónico</label>
                             <input type="email" id="email" name="email" placeholder="Tu Email" required>
                         </div>
                         <div class="st-form-field">
+                            <label for="subject" class="st-sr-only">Asunto del Mensaje</label>
                             <input type="text" id="subject" name="subject" placeholder="Asunto" required>
                         </div>
                         <div class="st-form-field">
+                            <label for="msg" class="st-sr-only">Escribe tu mensaje</label>
                             <textarea id="msg" name="message" placeholder="Mensaje" cols="30" rows="10"
                                 required></textarea>
                         </div>
@@ -481,7 +530,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="assets/js/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js/jquery.slick.min.js"></script>
     <script src="assets/js/lightgallery.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
