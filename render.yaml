@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: MDev
+    name: mdev-portfolio
     env: node
     plan: free
     buildCommand: npm install
