@@ -242,7 +242,10 @@
     <footer>
         <div class="container">
             <div class="st-copyright-wrap text-center" style="padding: 30px 0; color: #888;">
-                <div class="st-copyright-text">© 2025 Marco Daza.</div>
+                <div class="st-copyright-text">© 2025 Marco Daza. <span
+                        style="margin-left: 10px; opacity: 0.6; font-size: 0.9em;">| <i class="fas fa-eye"></i>
+                        <%= (data.stats && data.stats.visits) ? data.stats.visits : 0 %>
+                    </span></div>
             </div>
         </div>
     </footer>
