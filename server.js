@@ -46,6 +46,14 @@ app.use(session({
 // 1. Página de Inicio (Pública)
 app.get('/', (req, res) => {
     const data = db.read();
+
+    // Incrementar Contador de Visitas (Simple)
+    if (!data.stats) {
+        data.stats = { visits: 0, shares: 0 };
+    }
+    data.stats.visits = (data.stats.visits || 0) + 1;
+    db.write(data); // Guardar el incremento
+
     res.render('index', { data });
 });
 
@@ -127,6 +135,22 @@ app.post('/admin/save', (req, res) => {
     } catch (err) {
         console.error("Error al guardar:", err);
         res.status(500).send("Error guardando datos");
+    }
+});
+
+// Endpoint para rastrear "Shares" (Compartidos)
+app.post('/api/track-share', (req, res) => {
+    try {
+        const data = db.read();
+        if (!data.stats) {
+            data.stats = { visits: 0, shares: 0 };
+        }
+        data.stats.shares = (data.stats.shares || 0) + 1;
+        db.write(data);
+        res.json({ success: true, shares: data.stats.shares });
+    } catch (err) {
+        console.error("Error tracking share:", err);
+        res.status(500).json({ success: false });
     }
 });
 

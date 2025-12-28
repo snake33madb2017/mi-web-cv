@@ -243,5 +243,9 @@
             "content": "<h1>Guía para estudiar programación: Ruta efectiva para el éxito profesional</h1><p>Aprender a programar es la habilidad más transformadora del siglo XXI. Sin embargo, para no abandonar en el intento, necesitas una estrategia clara basada en la eficiencia.</p><h2>La lógica antes que la sintaxis: El secreto de los grandes programadores</h2><p>Muchos principiantes cometen el error de saltar de lenguaje en lenguaje sin entender cómo funciona la computación.</p><h3>¿Qué lenguaje elegir para empezar en 2025?</h3><p>Los lenguajes son herramientas; la lógica de programación es la verdadera habilidad. Si entiendes estructuras de datos y bucles, aprender Python, JavaScript o Java será cuestión de semanas. Recomiendo empezar con lenguajes de sintaxis clara para dominar primero los fundamentos.</p><h2>Metodología 80/20: Menos tutoriales y más proyectos reales</h2><p>Existe la trampa del \"infierno de los tutoriales\", donde sientes que aprendes porque sigues un video, pero no sabes qué hacer frente a una hoja en blanco.</p><h3>Cómo construir un portafolio en GitHub que atraiga reclutadores</h3><p>La regla de oro es el 80/20: dedica el 20% a la teoría y el 80% a picar código. Construye una calculadora, un clon de una app famosa o una lista de tareas. Sube todo a GitHub; ese es tu verdadero currículum en el mundo tecnológico.</p><h2>Soft Skills: La importancia de la comunidad y la resolución de problemas</h2><p>Nadie programa solo. Aprender a investigar y colaborar es tan importante como escribir código limpio.</p><h3>Aprender a leer documentación: La habilidad número uno del desarrollador</h3><p>Aprender a leer la documentación oficial te preparará para el mundo real. Únete a comunidades en Discord o Stack Overflow. Las empresas buscan personas que sepan encontrar soluciones a problemas que nunca han visto antes.</p><p><em>¡Empieza hoy tu camino! Descarga mi hoja de ruta gratuita para convertirte en desarrollador full-stack en menos de 12 meses.</em></p>",
             "link": "/blog/guia-estudiar-programacion"
         }
-    ]
+    ],
+    "stats": {
+        "visits": 0,
+        "shares": 0
+    }
 }

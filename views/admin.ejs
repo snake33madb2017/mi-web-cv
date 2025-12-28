@@ -141,6 +141,42 @@
                 <div class="content">
                     <div class="container-fluid">
 
+
+                        <!-- ROW DE ESTADÍSTICAS -->
+                        <div class="row">
+                            <div class="col-lg-6 col-6">
+                                <!-- small box -->
+                                <div class="small-box bg-info">
+                                    <div class="inner">
+                                        <h3>
+                                            <%= (data.stats && data.stats.visits) ? data.stats.visits : 0 %>
+                                        </h3>
+                                        <p>Visitas Totales</p>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="fas fa-eye"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ./col -->
+                            <div class="col-lg-6 col-6">
+                                <!-- small box -->
+                                <div class="small-box bg-success">
+                                    <div class="inner">
+                                        <h3>
+                                            <%= (data.stats && data.stats.shares) ? data.stats.shares : 0 %>
+                                        </h3>
+                                        <p>Veces Compartido</p>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="fas fa-share-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ./col -->
+                        </div>
+                        <!-- /.row -->
+
                         <!-- SECCIÓN HERO -->
                         <div class="card card-primary card-outline" id="hero">
                             <div class="card-header">

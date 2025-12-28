@@ -250,6 +250,23 @@
     <!-- Scripts -->
     <script src="/assets/js/jquery-3.7.1.min.js"></script>
     <script src="/assets/js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Interceptar clics en botones de compartir
+            $('.st-share-box a').on('click', function (e) {
+                // No prevenimos el comportamiento por defecto (abrir enlace)
+                // Lanzamos la petición de seguimiento en segundo plano
+                fetch('/api/track-share', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                }).then(response => response.json())
+                    .then(data => console.log('Share tracked:', data))
+                    .catch(err => console.error('Error tracking share:', err));
+            });
+        });
+    </script>
 </body>
 
 </html>
