@@ -245,7 +245,13 @@
         }
     ],
     "stats": {
-        "visits": 0,
-        "shares": 0
+        "visits": 1,
+        "shares": 0,
+        "visited_ips": [
+            {
+                "ip": "::1",
+                "date": "2025-12-28T01:50:41.604Z"
+            }
+        ]
     }
 }

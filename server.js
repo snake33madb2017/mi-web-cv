@@ -47,12 +47,28 @@ app.use(session({
 app.get('/', (req, res) => {
     const data = db.read();
 
-    // Incrementar Contador de Visitas (Simple)
+    // Contador de Visitas con IP (Únicos)
     if (!data.stats) {
-        data.stats = { visits: 0, shares: 0 };
+        data.stats = { visits: 0, shares: 0, visited_ips: [] };
     }
-    data.stats.visits = (data.stats.visits || 0) + 1;
-    db.write(data); // Guardar el incremento
+    if (!data.stats.visited_ips) {
+        data.stats.visited_ips = [];
+    }
+
+    // Obtener IP del cliente (considerando proxies como Cloudflare o Nginx)
+    const clientIp = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+
+    // Verificar si la IP ya existe
+    const ipExists = data.stats.visited_ips.some(entry => entry.ip === clientIp);
+
+    if (!ipExists) {
+        data.stats.visits = (data.stats.visits || 0) + 1;
+        data.stats.visited_ips.push({
+            ip: clientIp,
+            date: new Date().toISOString()
+        });
+        db.write(data); // Guardar solo si es nueva visita
+    }
 
     res.render('index', { data });
 });
@@ -136,6 +152,36 @@ app.post('/admin/save', (req, res) => {
         console.error("Error al guardar:", err);
         res.status(500).send("Error guardando datos");
     }
+});
+
+
+// Endpoint para descargar registro de IPs (Solo Admin)
+app.get('/admin/download-ips', (req, res) => {
+    if (!req.session.isAuthenticated) {
+        return res.status(403).send('No autorizado');
+    }
+
+    const data = db.read();
+    const visitedIps = data.stats && data.stats.visited_ips ? data.stats.visited_ips : [];
+
+    // Generar contenido del archivo de texto
+    let fileContent = "Registro de Visitas - IPs Unicas\n";
+    fileContent += "=================================\n\n";
+    fileContent += "IP\t\t\tFECHA\n";
+    fileContent += "--\t\t\t-----\n";
+
+    visitedIps.forEach(entry => {
+        // Formatear si entry es objeto o string por compatibilidad
+        const ip = entry.ip || entry;
+        const date = entry.date || 'Desconocida';
+        fileContent += `${ip}\t\t${date}\n`;
+    });
+
+    // Configurar cabeceras para la descarga
+    res.setHeader('Content-disposition', 'attachment; filename=visitas_ips.txt');
+    res.setHeader('Content-type', 'text/plain');
+    res.write(fileContent);
+    res.end();
 });
 
 // Endpoint para rastrear "Shares" (Compartidos)
